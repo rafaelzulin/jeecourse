@@ -48,7 +48,7 @@ public class CalculatorTest {
 	
 	@Test
 	public void subtractNumbersWithDifferentLengths() {
-		String result = new CalculatorImpl().add("1234", "251");
+		String result = new CalculatorImpl().subtract("1234", "251");
 		assertEquals("1082", result);
 	}
 }

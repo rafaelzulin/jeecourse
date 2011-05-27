@@ -42,13 +42,12 @@ public class CalculatorImpl implements Calculator {
 			
 			Integer partial = 0;
 			if (leftPartial < rightPartial) {
-				leftPartial += 10;
-				partial = leftPartial - rest - rightPartial;
-				rest = 1;
+				partial = leftPartial + 10 - rest - rightPartial;
 			} else {
 				partial = leftPartial - rest - rightPartial;
-				rest = 0;
 			}
+			
+			if (partial >= 10) rest = 1;
 
 			addResult[i] = partial; 
 		}
